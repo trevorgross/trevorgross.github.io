@@ -12,7 +12,8 @@ Ooma says of the dongle: "Works only with Ooma Telo. Not for use with other devi
 `{USB_DEVICE(0x226A, 0x817B)}, /* ooma wifi/bt dongle */ \`
 - makepkg -s 
 - install the package
-- insert the module: `# insmod /lib/modules/$(uname -r)/kernel/drivers/net/wireless/8192cu.ko`
+- insert the module:  
+`# insmod /lib/modules/$(uname -r)/kernel/drivers/net/wireless/8192cu.ko`
 - use `-D wext` with `wpa_supplicant`. iwd doesn't appear to work at all with this device.
 
 \* if you don't do this, you'll have to do the following every time before loading the module:  
