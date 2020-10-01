@@ -7,9 +7,11 @@ I bought an Ooma Telo and the Wi-Fi &amp; Bluetooth adapter. Performance was aby
 Ooma says of the dongle: "Works only with Ooma Telo. Not for use with other devices." 
 
 Arch Linux didn't recognize the adapter(s). The dongle appears as a USB 2.0 "Genesys Logic, Inc. Hub" with ID 05e3:0608. Two other devices show up in `lsusb`. These are the Wi-Fi and Bluetooth adapters attached to the dongle's internal hub.  
-`Bus 001 Device 049: ID 226a:0001  
+```
+Bus 001 Device 049: ID 226a:0001  
 Bus 001 Device 048: ID 226a:817b  
-Bus 001 Device 047: ID 05e3:0608 Genesys Logic, Inc. Hub`
+Bus 001 Device 047: ID 05e3:0608 Genesys Logic, Inc. Hub  
+```
 
 Device 49 is the Bluetooth adapter, per dmesg it's a CSR8510 A10. I had Bluetooth enabled already, and the adapter just showed up. So btusb and probably some other module (btrtl, etc) got that working without me doing anything. 
 
