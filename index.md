@@ -40,7 +40,8 @@ Using the 8192cu module from AUR works.
 Use kernel-supplied module, `rtl8192cu` if you need monitor mode
 - `# rmmod 8192cu`
 - `# modprobe rtl8192cu`
-- `# echo 226a 817b > /sys/bus/usb/drivers/rtl8192cu/new_id` (if you haven't already)
+- `# echo 226a 817b > /sys/bus/usb/drivers/rtl8192cu/new_id`  
+(if you haven't already)
 - `# ip link set $DEV down`
 - `# iw $DEV set monitor control`
 - `# ip link set $DEV up`
