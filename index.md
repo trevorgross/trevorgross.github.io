@@ -13,11 +13,11 @@ Bus 001 Device 048: ID 226a:817b
 Bus 001 Device 047: ID 05e3:0608 Genesys Logic, Inc. Hub  
 ```
 
-Device 49 is the Bluetooth adapter, per dmesg it's a CSR8510 A10. I had Bluetooth enabled already, and the adapter just showed up. So btusb and probably some other module (btrtl, etc) got that working without me doing anything. 
+Device 49 is the Bluetooth adapter, per dmesg it's a CSR8510 A10. I had Bluetooth enabled already, and the adapter just showed up. So btusb and probably some other module (btrtl, etc) got that working without me doing anything. I don't know why it didn't have the USB Vendor ID issue that the Wi-Fi has. 
 
 Wi-Fi didn't work. I don't remember how but somehow I learned that the adapter is a Realtek 8192cu. Probably by Googling for "realtek idProduct=817b," or something along those lines. 
 
-Loading the `rtl8192cu` module doesn't result in a working adapter. First, you have to set the `new_id` in sysfs to identify the device on the hub because it uses a nonstandard vendor id. Once you do that, the adapter shows up in `iwconfig`, etc. but you can't see or connect to a network or do anything useful. 
+Loading the `rtl8192cu` module doesn't result in a working adapter. First, you have to set the `new_id` in sysfs to identify the device on the hub. Once you do that, the adapter shows up in `iwconfig`, etc. but you can't see or connect to a network or do anything useful. 
 
 Using the 8192cu module from AUR works.
 
