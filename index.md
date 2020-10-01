@@ -25,12 +25,13 @@ Using the 8192cu module from AUR works.
 - cd 8192cu-dkms
 - makepkg -s
 - delete the created package
-- optional (but recommended*): edit src/8192cu/os_dep/linux/usb_intf.c, add vendor and dev:  
+- optional (but recommended*): edit src/8192cu/os_dep/linux/usb_intf.c, add vendor and dev somewhere:  
 `{USB_DEVICE(0x226A, 0x817B)}, /* ooma wifi/bt dongle */ \`
 - makepkg -s 
 - install the package
 - insert the module:  
-`# insmod /lib/modules/$(uname -r)/kernel/drivers/net/wireless/8192cu.ko`
+`# insmod /lib/modules/$(uname -r)/kernel/drivers/net/wireless/8192cu.ko`  
+(or just `# modprobe 8192cu`)  
 - use `-D wext` with `wpa_supplicant`. iwd doesn't appear to work at all with this device.
 
 \* if you don't do this, you'll have to do the following every time:  
@@ -39,6 +40,7 @@ Using the 8192cu module from AUR works.
 Use kernel-supplied module, `rtl8192cu` if you need monitor mode
 - `# rmmod 8192cu`
 - `# modprobe rtl8192cu`
+- `# echo 226a 817b > /sys/bus/usb/drivers/rtl8192cu/new_id` (if you haven't already)
 - `# ip link set $DEV down`
 - `# iw $DEV set monitor control`
 - `# ip link set $DEV up`
