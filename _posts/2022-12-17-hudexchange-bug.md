@@ -2,9 +2,9 @@
 layout: post
 title: 'Execute arbitrary JavaScript on hudexchange.info'
 ---
-[HUD Exchange](https://www.hudexchange.info/) is an official website of the Department of Housing and Urban Development. It has mostly reference and training materials for people and organizations implementing HUD programs. 
+A few months ago, I discovered a bug in the search results page on <https://www.hudexchange.info/>. The bug allows execution of arbitrary JavaScript on the page. I reported this bug in detail through the contact mechanism on the site on September 22, 2022.
 
-A few months ago, I discovered a bug in the site's search results page. The bug allows execution of arbitrary JavaScript on the page. I reported this bug in detail through the contact mechanism on the site on September 22, 2022.
+[HUD Exchange](https://www.hudexchange.info/) is an official website of the Department of Housing and Urban Development. It has mostly reference and training materials for people and organizations implementing HUD programs.
 
 ## Demo
 This `fetch()`es my commit info from Github and parses it, then alerts my name.
