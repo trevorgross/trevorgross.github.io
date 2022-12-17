@@ -28,7 +28,7 @@ Using the 8192cu module from AUR works.
 - cd 8192cu-dkms
 - makepkg -s
 - delete the created package
-- optional (but recommended*): edit src/8192cu/os_dep/linux/usb_intf.c, add vendor and dev somewhere:  
+- optional (but recommended[^1]): edit src/8192cu/os_dep/linux/usb_intf.c, add vendor and dev somewhere:  
 `{USB_DEVICE(0x226A, 0x817B)}, /* ooma wifi/bt dongle */ \`
 - makepkg -s 
 - install the package
@@ -37,7 +37,7 @@ Using the 8192cu module from AUR works.
 (or just `# modprobe 8192cu`)  
 - use `-D wext` with `wpa_supplicant`. iwd doesn't appear to work at all with this device.
 
-\* if you don't do this, you'll have to do the following every time:  
+[^1]: If you don't do this, you'll have to do the following every time:  
  `# echo 226a 817b > /sys/bus/usb/drivers/rtl8192cu/new_id`
 
 Use kernel-supplied module, `rtl8192cu` if you need monitor mode
