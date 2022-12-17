@@ -2,7 +2,6 @@
 layout: post
 title: 'Using the Ooma Wi-Fi &amp; Bluetooth adapter in Arch Linux'
 ---
-## Using the Ooma Wi-Fi &amp; Bluetooth adapter in Arch Linux
 
 tl;dr: use the 8192cu-dkms package and set the correct USB Vendor ID. 
 
