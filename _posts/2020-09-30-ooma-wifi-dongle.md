@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 'Using the Ooma Wi-Fi &amp; Bluetooth adapter in Arch Linux'
 ---
 ## Using the Ooma Wi-Fi &amp; Bluetooth adapter in Arch Linux
