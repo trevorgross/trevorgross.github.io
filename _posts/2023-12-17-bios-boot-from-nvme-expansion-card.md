@@ -2,7 +2,7 @@
 layout: post
 title: 'Boot from NVMe PCIe expansion card with an old BIOS'
 ---
-<a href="#steps>Skip to how to do this</a>
+[Skip to how to do this](#steps)
 
 Recently I installed an NVMe drive into a PCIe slot using a cheap NVMe-PCIe adapter. The motherboard it's intalled on is old and has a legacy non-UEFI BIOS. 
 
