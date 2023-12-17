@@ -44,6 +44,6 @@ The basic concept of "`/boot` on the thumb drive" was sound, but it requires add
 8. Configure BIOS to boot from USB drive
 
 ## References
-This post is what finally got me there: (https://ubuntuforums.org/showthread.php?t=2415658&p=13849399#post13849399)
+This post is what finally got me there: <https://ubuntuforums.org/showthread.php?t=2415658&p=13849399#post13849399>
 
-Relevant `parted` manual: (https://www.gnu.org/software/parted/manual/html_node/set.html)
+Relevant `parted` manual: <https://www.gnu.org/software/parted/manual/html_node/set.html>
