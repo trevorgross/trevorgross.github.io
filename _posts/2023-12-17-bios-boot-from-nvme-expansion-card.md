@@ -6,11 +6,11 @@ title: 'Boot from NVMe PCIe expansion card with an old BIOS'
 
 Recently I installed an NVMe drive into a PCIe slot using a cheap NVMe-PCIe adapter. The motherboard it's intalled on is old and has a legacy non-UEFI BIOS. 
 
-The adapter works great. The BIOS shows "expansion cards" or something similar as a boot option. All I had to do was select that boot option and I could use the computer with just the NVMe and not other drives.
+The adapter works great. The BIOS shows "expansion cards" or something similar as a boot option. All I had to do was select that boot option and I could use the computer with only the NVMe and no other drives.
 
 Except it didn't work. It wouldn't boot from the NVMe expansion card. Maybe that option exists because other types of expansion cards work. Or maybe it just doesn't work at all. It wouldn't surprise me. 
 
-Anyway, no problem, I'll just throw a USB thumb drive in, install `/boot` to the thumb drive, and be on my way. As you already know this also didn't work. 
+Anyway, no problem, I'll throw a USB thumb drive in, install `/boot` to the thumb drive, and be on my way. As you already know this also didn't work. 
 
 The basic concept of "`/boot` on the thumb drive" was sound, but it requires additional partitions and some arcane flags. The steps, when installing Arch Linux, are as follows. Note that you can use an SATA drive instead of a USB drive if you adjust the steps accordingly.
 
@@ -24,7 +24,7 @@ The basic concept of "`/boot` on the thumb drive" was sound, but it requires add
     2. The drive can be small; I'm using a 256Mb drive
 3. Boot the Arch installer from another USB drive
 4. Format the NVMe using GPT partition table
-    1. GPT is required for the USB drive, may or may not be required here, but just use it
+    1. GPT is required for the USB drive, may or may not be required here, but just use it. The reference below says it's required.
 5. Format the USB drive using GPT partition table
     1. This one *MUST* be GPT
     2. Create two partitions:
