@@ -30,7 +30,7 @@ The basic concept of "`/boot` on the thumb drive" was sound, but it requires add
     2. Create two partitions:
         1. `/boot`, of whatever size you want. I'm using only 228Mb.
         2. Unformatted partition, can be very small. I'm using 10Mb. Partition type probably doesn't matter. I'm using EF02, which is a UEFI partition type, and this computer doesn't even have UEFI.
-    3. Write the partition table of the USB drive and exit
+    3. Write the partition table of the USB drive and exit gdisk
     4. Use parted to set the following flags:
     5. Legacy boot on the /boot partition:
 
