@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Boot from NVMe PCIe expansion card with an old BIOS'
+summary: "Legacy BIOS might not boot from an NVMe drive installed via PCIe expansion card, even if it says it can. Using another drive for the boot partition requires a few extra steps."
 ---
 [Skip to how to do this](#steps)
 
