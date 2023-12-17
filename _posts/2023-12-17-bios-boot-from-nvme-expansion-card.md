@@ -32,10 +32,10 @@ The basic concept of "`/boot` on the thumb drive" was sound, but it requires add
         2. Unformatted partition, can be very small. I'm using 10Mb. Partition type probably doesn't matter. I'm using EF02, which is a UEFI partition type, and this computer doesn't even have UEFI.
     3. Write the partition table of the USB drive and exit gdisk
     4. Use parted to set the following flags:
-    5. Legacy boot on the /boot partition:
+    5. legacy_boot on the `/boot` partition:
 
         `(parted) set 1 legacy_boot on`
-    6. bios_grub, whatever that is, on the second partition:
+    6. bios_grub, whatever that is, on the second, unformatted partition:
 
         `(parted) set 2 bios_grub on`
 6. Mount the `/boot` partition of the USB drive, `/dev/sda1`, on `/mnt/boot`. Install Arch as usual.
